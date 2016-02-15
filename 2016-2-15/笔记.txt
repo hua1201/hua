@@ -1,0 +1,283 @@
+css:
+js:
+html5：
+---------------------------------------
+git:
+grunt:
+gulp:
+angular:
+---------------------------------------	
+开源：代码公布  -> 进步
+---------------------------------------
+工具：
+cvs: excel文件
+
+svn:代码版本管理工具	50%
+	sinaapp
+
+	原则：
+		先update -> 再commit(一定要写提交信息)
+
+	集中式管理   svn服务器
+
+	安装(小乌龟)svn客户端
+
+	代码安全
+	只能在公司使用
+	文件
+
+	慢
+
+	不方便开源项目
+
+	验证：右键
+git:代码版本管理工具	50%
+
+	分布式(每个人都是一台服务器)
+	二进制流
+
+	块
+
+	前端
+
+	开源
+
+官网：
+	http://git-scm.com/
+下载地方：
+	http://git-scm.com/download/
+安装客户端：
+	右键
+		git GUI	  图形界面  -> low
+		git bash   命令行
+
+命令行:
+	a).运行->cmd
+		git --version  失败
+
+		DOS命令
+			dir
+			cls
+			cd 目录名
+	b). 在你希望地方,右键->git bash
+		liunx命令
+		git --version  查看此时git版本
+-------------------------------
+* 没有提示，就是正确的
+
+liunx：
+pwd	查看此时在哪里
+ls	列出当前目录下所有文件，以及文件夹
+	ls -ah	列出隐藏文件
+clear	清屏
+cd	目录名
+cd..	退到上级
+tab键	补全命令
+
+mkdir	新建目录
+rmdir	删除目录
+
+touch aa.txt	新建文件
+rm    aa.txt	删除文件
+
+cat   aa.txt    查看文件内容
+
+echo nameis > a.txt  新建一个a.txt文件并且写入nameis内容
+
+编辑文件：
+vi(vim) a.txt -> i ->编写内容 ->
+	esc->:wq
+------------------------------
+error: 需要解决的
+warning: 可以不理
+------------------------------
+
+仓库： 存储东西
+
+	git仓库
+
+git init    让一个普通目录变成git仓库
+	使用git管理
+
+你问我答？
+	git status	查看此时git状态
+
+	答：你现在哪一步，可能接下来要做要什么
+----------------------------------
+git add 文件	添加到缓存区
+git rm --cached 文件 从缓存区里面删除东西
+----------------------------------
+
+git commit -m '此次提交描述信息'  提交到仓库里面
+
+----------------------------------
+流程：
+	git status -> git add -> git commit
+
+	-> git push
+
+----------------------------------
+svn -> sinaapp
+	注册用户名、密码
+
+git -> github
+
+github:(火) 非常好学习地方
+	http://github.com/
+
+	注册用户名、密码
+
+	* 验证邮箱 使用另一个邮箱(一定要)
+
+新建一个目录(仓库)：
+	点击 '+' -> New repository -> 填写name，drscription->创建
+
+本地新项目扔到github：
+
+本地git和github关联：
+
+	ssh连接
+
+	1. 生成一个秘钥
+		ssh-keygen -t rsa -C "xx@xx.com"
+
+		在当前用户目录下找.ssh目录
+			id_rsa  -> 私有秘钥
+			id_rsa.pub -> 共有秘钥
+				打开，千万不要用一些乱七八糟编辑器
+				
+				用记事本打开
+	2. 点击头像-> settings -> ssh keys -> new keys->
+		title随便
+		
+----------------------------------
+配置git：
+	用户名：	
+	git config --global user.name "abc"
+	邮箱：	
+	git config --global user.email "xx@xx.com"
+
+	git config -l	
+----------------------------------
+
+	3. git remote add origin git@github.com:itstrive/git-test.git
+		本地和github对应上了
+	4. git push  推送github网站
+		git push -u origin master
+
+
+readme 文件，项目说明文件
+
+-----------------------------
+git checkout a.txt  回退
+
+-----------------------------
+删除文件：
+本地文件需要删除: rm 文件
+	          git rm 文件	
+-----------------------------
+git status-> git add/rm -> git commit -> git push	
+	
+-----------------------------
+公司已有项目：
+	git clone 地址
+
+.md   markdown语言
+	#
+	##
+	###
+	-
+---------------------------------
+其他一些命令：
+	git diff  查看现在跟之前不同之处(工作区)
+	git log	  查看commit日志(记录)
+		1320dd73ea6fda2a03dc86d3f0012662  commit_id
+	git log --pretty=oneline  日志显示到一行上
+
+	git reset --hard commit_id   回到某个版本
+
+	git reflog   查看未来提交记录
+
+	HEAD   当前版本(仓库指针发生变化)
+
+	git diff HEAD (缓存区和当前版本不同) 
+		(add了，没有commit)
+
+	git reset HEAD  恢复到当前版本
+	
+		HEAD^  上一个版本
+		HEAD^^ 上上个版本
+
+	git add .
+---------------------------------------
+分支：
+	master	 主分支(很重要)
+
+	查看分支：
+		git branch
+	创建分支：
+		git branch aaa  创建一个aaa分支
+	切换分支：
+		git checkout aaa  切换到aaa分支上
+
+		简单命令：git checkout -b aaa 创建并且切换到aaa分支
+
+	合并分支：
+		git merge aaa	合并aaa分支到当前分支
+	删除分支：
+		git branch -d aaa 删除aaa分支
+-------------------------------------
+git -> github
+
+	开源
+		为开源做点贡献
+new pull reqeust?
+	先fork->你的github仓库 ->clone本地
+	
+
+	https://github.com/itstrive/class_test
+-------------------------------------
+用github开通自己个人博客？
+	1. 点击 "+" -> new repository -> name
+		你的用户名.github.com
+	2. 点击当前目录里面 settings -> 
+    		Launch automatic page generator ->
+		continue to layouts ->
+		publish page
+
+浏览器里面访问：
+	你的用户名.github.io		
+------------------------------------- 
+grunt
+gulp
+angular	
+
+	
+	
+	
+		
+	
+		
+
+	
+	
+	
+	
+	
+
+
+		
+	
+
+	
+
+	
+
+
+
+
+
+
+
+
+
